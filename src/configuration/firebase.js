@@ -4,13 +4,13 @@ import { getAuth } from 'firebase/auth';
 import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyACv_UsipplRuyA8XUP_ulm1Z3zoTy1xNU",
-    authDomain: "real---estate-604ff.firebaseapp.com",
-    projectId: "real---estate-604ff",
-    storageBucket: "real---estate-604ff.appspot.com",
-    messagingSenderId: "89828625718",
-    appId: "1:89828625718:web:0e5cb235b4e1711226f797",
-    measurementId: "G-G88Q56CB52"
+    apiKey: "AIzaSyC8aeYA2lamecz1axScvZZ004teHwq-2oc",
+    authDomain: "real---estate-2750b.firebaseapp.com",
+    projectId: "real---estate-2750b",
+    storageBucket: "real---estate-2750b.appspot.com",
+    messagingSenderId: "566101892819",
+    appId: "1:566101892819:web:662d6ebb916286387bfe26",
+    measurementId: "G-01VZPJMYGZ"
 };
 
 const app = initializeApp(firebaseConfig);
