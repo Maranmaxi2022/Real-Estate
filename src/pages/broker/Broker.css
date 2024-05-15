@@ -7,7 +7,8 @@ body {
     max-width: 90rem;
     margin: auto;
 }
-.heading{
+.heading {
+    padding: 100px 100px 25px;
     background: #171717;
     color: #ffffff;
 }
@@ -17,7 +18,7 @@ body {
 }
 
 .property-info {
-    padding: 1rem;
+    padding: 25px 100px 100px;
     background: #171717;
     color: #ffffff;
 }
@@ -49,7 +50,7 @@ body {
 }
 
 .cost-adjustment {
-    padding: 1rem;
+    padding: 25px 100px 100px;
     background: #171717;
     color: #ffffff;
 }
