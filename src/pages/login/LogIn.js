@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../../configuration/firebase';
 import './LogIn.css';
 
@@ -22,6 +22,19 @@ const LogIn = () => {
         }
     };
 
+    const signInWithGoogle = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                navigate('/broker');
+            })
+            .catch((error) => {
+                console.error('Error signing in:',error.message);
+            });
+    };
+
     return(
         <div className="login-side">
             <div className="my-form__wrapper">
@@ -33,7 +46,7 @@ const LogIn = () => {
                     {errorMessage && <p className="error-message">{errorMessage}</p>}
                     <div className="socials-row">
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a href="#" title="Use Google">
+                        <a href="#" title="Use Google" onClick={signInWithGoogle}>
                             <img src= 'https://flooranthropy.com/wp-content/uploads/2019/11/google-logo-png-open-2000.png' alt="Google"/>
                             Log in with Google
                         </a>
